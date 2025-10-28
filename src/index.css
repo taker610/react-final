@@ -277,3 +277,10 @@ li .list-item {
     width: 75%;
 
 }
+
+.poster__skel {
+    height: 500px;
+    width: 100%;
+    max-width: 350px;
+    background-color: rgb(221, 217, 217);
+}

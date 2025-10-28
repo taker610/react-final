@@ -14,7 +14,7 @@ const MovieDetail = (movies) => {
                     <img src={movies.Poster ? movies.Poster : null} alt="" />
                 </div>
                 <div className="right__side--panel">
-                    <h2>{movies.Title}</h2>
+                    <h2>{movies.title}</h2>
                     <h3>Plot Synopsis</h3>
                     <p className="plot">{movies.Plot}</p>
                     <p>Directed by: {movies.Director}</p>

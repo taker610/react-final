@@ -21,7 +21,7 @@ const Movie = () => {
     async function getMovies() {
         try {
         const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${key}&i=${id}`) 
-            movies.Title = data.Title
+            movies.title = data.Title
             movies.Year = data.Year
             movies.Rated = data.Rated
             movies.Released = data.Released
@@ -40,11 +40,11 @@ const Movie = () => {
         getMovies()
         setIsLoading(false)
 
-    },[setMovies])
+    },[])
     
     return (
            <>
-                {isLoading ? <MovieDetail movies={movies} /> : <MovieSkel /> }
+                {isLoading ? <MovieSkel /> : <MovieDetail movies={movies} /> }
            </>
          )
 }

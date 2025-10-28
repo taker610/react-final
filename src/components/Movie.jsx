@@ -21,15 +21,19 @@ const Movie = () => {
     async function getMovies() {
         try {
         const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${key}&i=${id}`) 
-            movies.title = data.Title
-            movies.Year = data.Year
-            movies.Rated = data.Rated
-            movies.Released = data.Released
-            movies.Runtime = data.Runtime
-            movies.Genre = data.Genre
-            movies.Director= data.Director
-            movies.Plot = data.Plot
-            movies.Poster = data.Poster
+            const formatted = {
+            Title : data.Title,
+            Year : data.Year,
+            Rating : data.Rated,
+            Released : data.Released,
+            Runtime : data.Runtime,
+            Genre : data.Genre,
+            Director : data.Director,
+            Plot : data.Plot,
+            Poster : data.Poster
+            }
+            setMovies(formatted)
+            setIsLoading(false)
             console.log(movies)
         } catch(err) {
             console.log(err)
@@ -38,9 +42,8 @@ const Movie = () => {
 
     useEffect(() => {
         getMovies()
-        setIsLoading(false)
-
-    },[])
+        
+    },[id])
     
     return (
            <>

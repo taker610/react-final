@@ -7,14 +7,16 @@ import axios from 'axios'
 import MovieSkel from './MovieSkel'
 
 
-const MovieDetail = (movies) => {
+const MovieDetail = ( { movies }) => {
+
+
        return (
            <div className="details__container">
                <div className="left__side--panel">
                     <img src={movies.Poster ? movies.Poster : null} alt="" />
                 </div>
                 <div className="right__side--panel">
-                    <h2>{movies.title}</h2>
+                    <h2>{movies.Title}</h2>
                     <h3>Plot Synopsis</h3>
                     <p className="plot">{movies.Plot}</p>
                     <p>Directed by: {movies.Director}</p>

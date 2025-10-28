@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.nav__wrapper a {
+    color: white;
+    font-weight: 500;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.large-text  {
+    font-size: 36px;
+    color: white;
+}
+
+.largest-text {
+    font-size: 45px;
+    color: white
+}
+
+.flex__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: white
+}
+
+.list__wrapper {
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.list__wrapper .list-item {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#navigation {
+    background-color: rgb(116, 5, 243);
+}
+
+#footer {
+    background-color: rgb(116, 5, 243);
+    width: 100%;
+    color: white;
+    padding-bottom: 10px;
+}
+
+#home {
+    background-image: url(./assets/wp1945909.jpg);
+    background-size: contain;
+    height: 450px;
+}
+
+.row .flex--center h2 {
+    color: white;
+}
+
+.search__bar--container {
+    width: 30%;
+    position: relative;
+    color: white;
+    margin: 20px 0;
+}
+
+.search__bar--container p {
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+}
+
+.searchbar {
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid rgb(228,221,221);
+    width: 100%;
+    padding-left: 15px;
+}
+
+.search__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    width: 50px;
+    color: black;
+}
+
+svg:hover {
+    cursor: pointer;
+    fill: blue;
+}
+
+.search__results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movie__card {
+    width: calc(100%/3);
+    margin: 10px 0;
+}
+
+.movie__card--container h3 {
+    color: grey;
+    text-decoration: none;
+    
+}
+
+.poster {
+    height: 500px;
+    width: 100%;
+    max-width: 350px;
+}
+
+select {
+    width: 100px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.searchHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.movie__card h3 {
+    width: 100%;
+    max-width: 350px;
+}
+
+.copyright__text {
+    height: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+li .list-item {
+    text-decoration: none;
+    color: white;
+}
+
+.details__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 460px;
+}
+
+.left__side--panel {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+
+.right__side--panel {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right__side--panel p {
+    padding-bottom: 5px;
+}
+
+.right__side--panel h2 {
+    padding-bottom: 10px;
+}
+
+.right__side--panel h1 {
+    padding-bottom: 10px;
+}
+
+.plot {
+    width: 60%;
+    border-bottom: 1px solid black;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.left__side--skelpanel {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 10px;
+}
+
+.right__side--skelpanel {
+    width: 50%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img--skeleton {
+    background-color: rgb(221, 217, 217);
+    height: 350px;
+    width: 250px;
+}
+
+.skeleton--h2 {
+    height: 30px;
+    background-color: rgb(221, 217, 217);
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.skeleton--h3 {
+    height: 25px;
+    background-color: rgb(221, 217, 217);
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.skeleton {
+    background-color: rgb(221, 217, 217);
+    margin-bottom: 5px;
+    height: 20px;
+    width: 75%;
+}
+
+.skeleton--plot {
+    background-color: rgb(221, 217, 217);
+    margin-bottom: 5px;
+    height: 60px;
+    width: 75%;
+
+}

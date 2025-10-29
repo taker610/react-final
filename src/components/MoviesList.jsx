@@ -13,6 +13,7 @@ const MoviesList = ({ movies, event }) => {
                             <div className="movie__card--container">
                                 <Link to={`/details/${movie.imdbID}`}>
                                 <h3 key={movie.imdbID}>{movie.Title}</h3>
+                                <p>{movie.Year}</p>
                                 <img src={movie.Poster} className="poster"/>
                                 </Link>
                             </div>

@@ -284,3 +284,13 @@ li .list-item {
     max-width: 350px;
     background-color: rgb(221, 217, 217);
 }
+
+.select {
+    width: 280px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.select__label {
+    margin-top: 15px;
+}

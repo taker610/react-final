@@ -16,6 +16,7 @@ const Movies = () => {
     const [movies,setMovies] = useState([])
     const [val, setVal] = useState()
     const [loading, setLoading] = useState(true)
+    const [sort, setSort] = useState(false)
 
     const { event } = useParams()
     
@@ -29,7 +30,22 @@ const Movies = () => {
             console.log(err)
         }
     }
+
+    function handleSelect(event) {
+        const sortOrder = event.target.value
+        if (sortOrder == 1) {
+            const ascMovies = movies.sort((a,b) => a.Year-b.Year)
+            setMovies(ascMovies)
+            setSort(true)
+            console.log(ascMovies)
+        } else if (sortOrder == 2) {
+            const descMovies = movies.sort((a,b) => b.Year-a.Year)
+            setMovies(descMovies)
+            setSort(true)
+            console.log(descMovies)
+        }
     
+    }
 
     function onSearchKeyPress(key) {
             if (key === 'Enter') {
@@ -55,11 +71,20 @@ const Movies = () => {
                             <div className="search__logo" onClick={goToHomeFromClick}>
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </div>
+                            <div>
+                        </div>
                         </div>
                         <p><b>Search by title in the box above</b></p>
+                        <p className="select__label"><b>Sort Results</b></p>
+                        <select className="select" onChange={e => handleSelect(e)}>
+                            <option value=""></option>
+                            <option value="1">Sort Release Year by Ascending</option>
+                            <option value="2">Sort Release Year by Descending</option>
+                        </select>
                         {loading ? <MoviesSkel movies={movies}/> : <MoviesList  movies={movies} event={event}/>}
                     </div>
                 </div>
               )
 }
+
 export default Movies

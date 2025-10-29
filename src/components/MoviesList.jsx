@@ -1,7 +1,9 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 
-const MoviesList = ({ movies, event }) => {
+const MoviesList = ({  movies, event }) => {
+
        return (
             <div className="row">
                 <div className="searchHeader">

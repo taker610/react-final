@@ -16,7 +16,6 @@ const Movies = () => {
     const [movies,setMovies] = useState([])
     const [val, setVal] = useState()
     const [loading, setLoading] = useState(true)
-    const [sort, setSort] = useState(false)
 
     const { event } = useParams()
     
@@ -36,12 +35,10 @@ const Movies = () => {
         if (sortOrder == 1) {
             const ascMovies = movies.sort((a,b) => a.Year-b.Year)
             setMovies(ascMovies)
-            setSort(true)
             console.log(ascMovies)
         } else if (sortOrder == 2) {
             const descMovies = movies.sort((a,b) => b.Year-a.Year)
             setMovies(descMovies)
-            setSort(true)
             console.log(descMovies)
         }
     
@@ -81,7 +78,7 @@ const Movies = () => {
                             <option value="1">Sort Release Year by Ascending</option>
                             <option value="2">Sort Release Year by Descending</option>
                         </select>
-                        {loading ? <MoviesSkel movies={movies}/> : <MoviesList  movies={movies} event={event}/>}
+                        {loading ? <MoviesSkel movies={movies}/> : <MoviesList  movies={movies} event={event} />}
                     </div>
                 </div>
               )

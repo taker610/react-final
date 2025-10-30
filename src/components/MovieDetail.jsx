@@ -20,7 +20,7 @@ const MovieDetail = ( { movies }) => {
                     <h3>Plot Synopsis</h3>
                     <p className="plot">{movies.Plot}</p>
                     <p>Directed by: {movies.Director}</p>
-                    <p>Rated {movies.Rated}</p>
+                    <p>Rated: {movies.Rated}</p>
                     <p>Genre: {movies.Genre}</p>
                     <p>Release Date: {movies.Released}</p>
                     <p>Runtime: {movies.Runtime}</p>

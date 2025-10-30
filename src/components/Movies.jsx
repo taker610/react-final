@@ -16,9 +16,10 @@ const Movies = () => {
     const [movies,setMovies] = useState([])
     const [val, setVal] = useState()
     const [loading, setLoading] = useState(true)
+    const [moviesRefresh, setMoviesRefresh] = useState()
 
     const { event } = useParams()
-    
+
     async function getMovies() {
         try {
         const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${key}&s=${event}`)
@@ -35,11 +36,15 @@ const Movies = () => {
         if (sortOrder == 1) {
             const ascMovies = movies.sort((a,b) => a.Year-b.Year)
             setMovies(ascMovies)
-            console.log(ascMovies)
+            console.log(sortOrder)
+            setMoviesRefresh(1)
+            
         } else if (sortOrder == 2) {
             const descMovies = movies.sort((a,b) => b.Year-a.Year)
             setMovies(descMovies)
             console.log(descMovies)
+            console.log(sortOrder)
+            setMoviesRefresh(2)
         }
     
     }
@@ -57,7 +62,7 @@ const Movies = () => {
     useEffect(() => {
         getMovies()
         setLoading(false)
-    },[movies])
+    },[event])
 
        return (
                 <div className="container">
@@ -73,7 +78,7 @@ const Movies = () => {
                         </div>
                         <p><b>Search by title in the box above</b></p>
                         <p className="select__label"><b>Sort Results</b></p>
-                        <select className="select" onChange={e => handleSelect(e)}>
+                        <select className="select" onChange={handleSelect}>
                             <option value=""></option>
                             <option value="1">Sort Release Year by Ascending</option>
                             <option value="2">Sort Release Year by Descending</option>

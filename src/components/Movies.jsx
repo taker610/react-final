@@ -78,7 +78,7 @@ const Movies = () => {
                         <p><b>Search by title in the box above</b></p>
                         <p className="select__label"><b>Sort Results</b></p>
                         <select className="select" onChange={handleSelect}>
-                            <option value=""></option>
+                            <option value="0" selected="selected"></option>
                             <option value="1">Sort Release Year by Ascending</option>
                             <option value="2">Sort Release Year by Descending</option>
                         </select>

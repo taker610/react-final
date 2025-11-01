@@ -20,7 +20,7 @@ const Movie = () => {
     
     async function getMovies() {
         try {
-        const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${key}&i=${id}`) 
+        const { data } = await axios.get(`https://www.omdbapi.com/?apikey=${key}&i=${id}`) 
             const formatted = {
             Title : data.Title,
             Year : data.Year,

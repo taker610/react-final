@@ -21,7 +21,7 @@ const Movies = () => {
 
     async function getMovies() {
         try {
-        const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${key}&s=${event}`)
+        const { data } = await axios.get(`https://www.omdbapi.com/?apikey=${key}&s=${event}`)
         const movieData = data.Search.slice(1,7)    
         console.log(movieData)
             setMovies(movieData)
